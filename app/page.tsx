@@ -86,6 +86,7 @@ const SERVICES = [
     num: "01",
     icon: Icons.business,
     pattern: "dots" as const,
+    img: "https://rltxedmwdojuovlblkea.supabase.co/storage/v1/object/public/site-assets/portfolio/service-business.webp",
     title: "Business Websites",
     text: "A complete, modern website for your business — services, gallery, contact and everything a customer needs to trust you.",
     chips: ["Multi-page", "Mobile-first", "Fast loading"],
@@ -94,6 +95,7 @@ const SERVICES = [
     num: "02",
     icon: Icons.booking,
     pattern: "grid" as const,
+    img: "https://rltxedmwdojuovlblkea.supabase.co/storage/v1/object/public/site-assets/portfolio/service-booking.webp",
     title: "Booking Websites",
     text: "Let customers book appointments online with services, a calendar and confirmations — no more missed calls or messy chats.",
     chips: ["Online booking", "Calendar", "Admin panel"],
@@ -102,6 +104,7 @@ const SERVICES = [
     num: "03",
     icon: Icons.landing,
     pattern: "waves" as const,
+    img: "https://rltxedmwdojuovlblkea.supabase.co/storage/v1/object/public/site-assets/portfolio/service-landing.webp",
     title: "Landing Pages",
     text: "One focused page that turns visitors into customers — perfect for a product, offer, course or new launch.",
     chips: ["High-converting", "One page", "Quick launch"],
@@ -110,6 +113,7 @@ const SERVICES = [
     num: "04",
     icon: Icons.maintenance,
     pattern: "diag" as const,
+    img: "https://rltxedmwdojuovlblkea.supabase.co/storage/v1/object/public/site-assets/portfolio/service-maintenance.webp",
     title: "Website Maintenance",
     text: "Updates, small changes, backups and support after launch — so your website stays fresh, secure and working.",
     chips: ["Updates", "Support", "Care plans"],
@@ -276,7 +280,8 @@ export default function Home() {
               {SERVICES.map((s, i) => (
                 <Reveal key={s.title}>
                   <article className="card" style={{ height: "100%" }}>
-                    <Pattern kind={s.pattern} />
+                    <img className="service-photo" src={s.img} alt="" aria-hidden="true" loading="lazy" />
+                    <div className="service-fade" aria-hidden="true" />
                     <span className="card-num">{s.num}</span>
                     <div className="card-icon">{s.icon}</div>
                     <h3>{s.title}</h3>
@@ -320,6 +325,7 @@ export default function Home() {
                 <Reveal key={p.title}>
                   <article className="card" style={{ height: "100%" }}>
                     <img className="card-photo" src={p.img} alt="" aria-hidden="true" loading="lazy" />
+                    <span className="card-veil" aria-hidden="true" />
                     <span className="tag">Demo Project</span>
                     <h3>{p.title}</h3>
                     <p>{p.text}</p>
