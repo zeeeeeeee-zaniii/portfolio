@@ -205,6 +205,10 @@ section { padding: 5.2rem 0; }
   animation: floaty 5s ease-in-out infinite;
 }
 .hero-badge .dot-live { width: 8px; height: 8px; border-radius: 50%; background: #7fb069; animation: pulse 1.8s ease-in-out infinite; }
+.hero-photo {
+  width: 100%; aspect-ratio: 13 / 10; object-fit: cover;
+  border-radius: 16px; display: block;
+}
 @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
 
