@@ -137,24 +137,28 @@ export default function Home() {
       title: "Online Booking Website",
       text: "Appointment booking with services, a live calendar, time slots that block once booked, and an admin panel to manage every booking.",
       url: process.env.NEXT_PUBLIC_DEMO_BOOKING_URL || "https://booking-glow-studio.vercel.app",
+      img: "https://rltxedmwdojuovlblkea.supabase.co/storage/v1/object/public/site-assets/booking/hero.webp",
       accent: "var(--accent)",
     },
     {
       title: "Business Website",
       text: "A complete website for a boutique — collections with prices, a gallery, customer quotes, opening hours and a contact form with an admin inbox.",
       url: process.env.NEXT_PUBLIC_DEMO_BUSINESS_URL || "https://velvet-thread-boutique-sw6v.vercel.app",
+      img: "https://rltxedmwdojuovlblkea.supabase.co/storage/v1/object/public/site-assets/business/hero.jpg",
       accent: "var(--caramel)",
     },
     {
       title: "Online Ordering Website",
       text: "A restaurant menu with a cart, cash-on-delivery checkout, order tracking for customers and a full order flow for the owner.",
       url: process.env.NEXT_PUBLIC_DEMO_ORDERING_URL || "https://ember-kitchen-pearl.vercel.app",
+      img: "https://rltxedmwdojuovlblkea.supabase.co/storage/v1/object/public/site-assets/ordering/hero.jpg",
       accent: "var(--accent-deep)",
     },
     {
       title: "Landing Page",
       text: "A one-page product site built to convert — benefits, reviews, pricing packs, an FAQ and an order form that saves every lead.",
       url: process.env.NEXT_PUBLIC_DEMO_LANDING_URL || "https://lumiere-glow-serum.vercel.app",
+      img: "https://rltxedmwdojuovlblkea.supabase.co/storage/v1/object/public/site-assets/landing/hero.jpg",
       accent: "var(--accent)",
     },
   ];
@@ -315,6 +319,7 @@ export default function Home() {
               {projects.map((p) => (
                 <Reveal key={p.title}>
                   <article className="card" style={{ height: "100%" }}>
+                    <img className="card-photo" src={p.img} alt="" aria-hidden="true" loading="lazy" />
                     <span className="tag">Demo Project</span>
                     <h3>{p.title}</h3>
                     <p>{p.text}</p>
